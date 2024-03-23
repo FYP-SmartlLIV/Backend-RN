@@ -13,7 +13,7 @@ const Complains = sequelize.define(
       
     },
     Cnic: {
-      type: DataTypes.NVARCHAR(13),
+      type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
     },

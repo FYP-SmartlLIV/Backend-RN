@@ -3,10 +3,10 @@ const app = express();
 
 app.use(express.json());
 const db = require("./config/database");
-const postRouter = require("./Post");
-
+const postRouter = require("./routes/Post");
+const newsRouter = require("./routes/News");
 app.use("/post", postRouter);
-
+app.use("/news", newsRouter);
 db.sync()
   .then((res) => {
     //run server at 8080 port
